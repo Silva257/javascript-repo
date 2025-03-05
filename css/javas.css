@@ -1,1 +1,12 @@
-h1{color: blue}
+h1{
+    color: blue;
+    font-size: 40px;}
+
+    .myBox{
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+    }
+    .highlight{
+        border: 10px solid red
+    }
