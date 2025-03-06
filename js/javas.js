@@ -40,6 +40,8 @@ buttonT.addEventListener('click', ()=>{
 
 })
 
+// CHANGING A PARAGRAPH BY UPDATING A FORM :
+
 const myFormO = document.getElementById('myForm')
 const myInputO = document.getElementById('myInput')
 const myButtonO = document.getElementById('myButton')
@@ -47,8 +49,11 @@ const parag = document.getElementById('myParagraph')
 
 myFormO.addEventListener('submit', (e)=>{
   e.preventDefault();
-  parag.textContent = myInputO.value
+  parag.textContent = myInputO.value;
+  myInputO.value = ''
 })
+
+// ADDING AND REMOVING HIGHLIGHTS IN JAVASCRIPT DYNAMICALLY :
 
 const box = document.getElementById('myBox')
 
@@ -58,3 +63,15 @@ function highlight(){
 function toggle(){
     box.classList.toggle('highlight')
 }
+
+// CREATING NEW ELEMENT IN THE DOCUMENT: 
+
+const myContainer = document.getElementById('container')
+const myBtn = document.getElementById('btn')
+
+myBtn.addEventListener('click', ()=>{
+    const newElement = document.createElement('div')
+    newElement.textContent = 'hello javascript'
+    document.body.appendChild(newElement)
+    
+})
