@@ -71,7 +71,22 @@ const myBtn = document.getElementById('btn')
 
 myBtn.addEventListener('click', ()=>{
     const newElement = document.createElement('div')
-    newElement.textContent = 'hello javascript'
+    newElement.textContent = 'hello javascript.'
     document.body.appendChild(newElement)
     
+})
+const validateInput = document.getElementById('myInp')
+
+const myValidButton = document.getElementById('sButton')
+
+const myValidForm = document.getElementById('formThree')
+
+
+myValidButton.addEventListener('click', ()=>{
+    if(validateInput.value.trim()===""){
+        alert('Fill the field')
+    }
+    myValidForm.addEventListener('submit', (e)=>{
+        e.preventDefault()
+    })
 })
