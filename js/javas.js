@@ -75,6 +75,9 @@ myBtn.addEventListener('click', ()=>{
     document.body.appendChild(newElement)
     
 })
+
+// FORM INTERRACTIONS :
+
 const validateInput = document.getElementById('myInp')
 
 const myValidButton = document.getElementById('sButton')
