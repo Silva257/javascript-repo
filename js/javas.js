@@ -1,31 +1,21 @@
-// let a = 4;
-// let b = 3;
-// let c = a + b
-// console.log(c);
-
-// function greet(silva) {
-//     return `hello, ${silva}`
-
-    
-
 // console.log(greet)
 
 console.log(document);
 
-const myHead = document.getElementById("myHead")
+const myHead = document.getElementById("myHead").style.color = "green"
 console.log(myHead);
 
+
 const getParagraph = document.querySelector(".myParagraph")
-const changeParagraph = getParagraph.style.color = "red"
-console.log(getParagraph)
+getParagraph.style.color = "blue"
 
 const eventButton = document.getElementById('myButton');
 
 eventButton.addEventListener('click', () => {
     // alert('clicked from javascript');
-     getParagraph.style.color = "blue";
+     getParagraph.style.color = "purple";
      getParagraph.style.fontSize = "25px";
-     getParagraph.textContent = "first click"
+     getParagraph.textContent = "Clicked from javascript"
 
 })
 console.log(eventButton)
@@ -34,9 +24,9 @@ const buttonT = document.querySelector(".buttonTwo")
 
 buttonT.addEventListener('click', ()=>{
     // alert('Another click made');
-    getParagraph.style.color = "green";
-    getParagraph.style.fontSize = "40px";
-    getParagraph.textContent = "Second click"
+    getParagraph.style.color = "darkcyan";
+    getParagraph.style.fontSize = "20px";
+    getParagraph.textContent = 'Another click'
 
 })
 
@@ -60,7 +50,7 @@ const box = document.getElementById('myBox')
 function highlight(){
     box.classList.add('highlight')
 }
-function toggle(){
+const toggle = ()=>{
     box.classList.toggle('highlight')
 }
 
@@ -70,8 +60,8 @@ const myContainer = document.getElementById('container')
 const myBtn = document.getElementById('btn')
 
 myBtn.addEventListener('click', ()=>{
-    const newElement = document.createElement('div')
-    newElement.textContent = 'hello javascript.'
+    const newElement = document.createElement('h2')
+    newElement.textContent = 'New element.'
     document.body.appendChild(newElement)
     
 })
@@ -93,3 +83,37 @@ myValidButton.addEventListener('click', ()=>{
         e.preventDefault()
     })
 })
+const list = document.getElementById('todolist')
+const input = document.getElementById('todoinp')
+const todobut = document.getElementById('todoButton')
+const todoForm = document.getElementById('todoId')
+
+
+// Add todo item on button click
+todobut.addEventListener('click', () => {
+
+    // const newElement = document.createElement('li'); // Create new li element
+    // newElement.textContent = input.value; // Set text content from input
+    // list.appendChild(newElement); // Append new li to the ul
+    // input.value = ''; // Clear input field
+
+    if(input.value.trim()===""){
+        alert("please add a todo item");
+        return;
+        // newElement.textContent = ""
+    }
+    const newElement = document.createElement('li'); // Create new li element
+    newElement.textContent = input.value; // Set text content from input
+    list.appendChild(newElement); // Append new li to the ul
+    input.value = ''; // Clear input 
+});
+
+// Prevent form submission
+todoForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+});
+
+
+
+
+
