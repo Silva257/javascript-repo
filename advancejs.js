@@ -51,7 +51,7 @@ console.log(add(4, 9));
 
 
 function Add(a, c){
-    return a * c
+    return a - c
 }
 console.log(Add(3, 21))
 
