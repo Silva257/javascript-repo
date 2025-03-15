@@ -92,20 +92,15 @@ const todoForm = document.getElementById('todoId')
 
 todobut.addEventListener('click', () => {
 
-    // const newElement = document.createElement('li'); // Create new li element
-    // newElement.textContent = input.value; // Set text content from input
-    // list.appendChild(newElement); // Append new li to the ul
-    // input.value = ''; // Clear input field
-
     if(input.value.trim()===""){
         alert("please add a todo item");
         return;
         // newElement.textContent = ""
     }
-    const newElement = document.createElement('li'); // Create new li element
-    newElement.textContent = input.value; // Set text content from input
-    list.appendChild(newElement); // Append new li to the ul
-    input.value = ''; // Clear input 
+    const newList = document.createElement('li'); // Create new li element
+    newList.textContent = input.value; // Set text content from input
+    list.appendChild(newList); // Append new li to the ul
+    input.value = ''; // Clear input field
 });
 
 // Prevent form submission
