@@ -3,7 +3,6 @@
 console.log(document);
 
 const myHead = document.getElementById("myHead").style.color = "green"
-console.log(myHead);
 
 
 const getParagraph = document.querySelector(".myParagraph")
